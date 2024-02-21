@@ -175,7 +175,7 @@ public class Pastefy {
     }
 
     protected void setupServer() {
-        httpServer.port(config.getInt("http.server.port", 80));
+        httpServer.port(config.getInt("http.server.port", 8080));
 
         if (config.has("http.server.cors")) {
             httpServer.beforeInterceptor(new CORSPolicy(config.get("http.server.cors")));
